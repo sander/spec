@@ -1,0 +1,7 @@
+{
+  "name": "spec",
+  "version": "0.1.0-SNAPSHOT",
+  "scripts": {
+    "run": "biwas hello.scm"
+  }
+}

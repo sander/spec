@@ -28,9 +28,9 @@ repositories {
       (newline)))
   (system "gradle wrapper"))
 
-(define-syntax test
-  (syntax-rules ()
-    ((_ cases* ...) (display (quote (list 'cases cases* ...))))))
+;(define-syntax test
+;  (syntax-rules ()
+;    ((_ cases* ...) (display (quote (list 'cases cases* ...))))))
 
 (define (check)
   (system "./gradlew check"))
