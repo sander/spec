@@ -1,3 +1,9 @@
+;tmp
+(define (with-output-to-file name cb) '())
+(define fs (node-require "fs"))
+(define child-process (node-require "child_process"))
+(define (system cmd) (js-invoke child-process "execSync" cmd))
+
 (define (kotlin-project name)
   (with-output-to-file "build.gradle.kts"
     (λ ()
