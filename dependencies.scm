@@ -1,0 +1,7 @@
+(when (js-undefined? (js-ref (js-eval "this") "*dependencies*"))
+  (define *dependencies* (make-eq-hashtable))
+  (js-set! (js-eval "this") "*dependencies*" *dependencies*)
+  (define (load-once dependency)
+    (when (not (hashtable-contains? *dependencies* dependency))
+      (load dependency)
+      (hashtable-set! *dependencies* dependency #t))))
