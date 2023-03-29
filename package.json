@@ -3,5 +3,8 @@
   "version": "0.1.0-SNAPSHOT",
   "scripts": {
     "run": "biwas hello.scm"
+  },
+  "dependencies": {
+    "biwascheme": "^0.7.5"
   }
 }
